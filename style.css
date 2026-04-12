@@ -1578,3 +1578,72 @@ li {
     }
 }
 
+/* Убираем синее выделение при нажатии на мобильных устройствах */
+button,
+.button,
+.navbar-burger,
+.navbar-item,
+.navbar-link,
+a,
+[role="button"],
+input,
+textarea,
+select,
+.gsc-search-button,
+.gsc-clear-button {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    outline: none !important;
+}
+
+/* Убираем фокусное кольцо (но оставляем для accessibility, если нужно) */
+button:focus,
+.button:focus,
+.navbar-burger:focus,
+a:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Для ссылок и кнопок в навбаре */
+.site-navbar .navbar-item,
+.site-navbar .navbar-link {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Для карточек новостей */
+.card,
+.card a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Для всех интерактивных элементов */
+.is-clickable,
+[onclick],
+[data-toggle],
+details,
+summary {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Дополнительно для WebKit браузеров (Chrome, Safari) */
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 1023px) {
+    button,
+    .button,
+    .navbar-burger,
+    .navbar-item,
+    .navbar-link,
+    a,
+    [role="button"] {
+        -webkit-tap-highlight-color: transparent !important;
+        -webkit-touch-callout: none !important;
+    }
+}
